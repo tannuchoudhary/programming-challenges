@@ -37,25 +37,31 @@ $11.99
 int costs[1000];
 int nCosts = 1000;
 
-int sumCosts() {
+int sumCosts() 
+{
     int sum = 0;
     
     int i = 0;
-    for (i = 0; i < nCosts; i++) {
+    for (i = 0; i < nCosts; i++) 
+    {
         sum += costs[i];
     }
     return sum;
 }
 
-int main() {
-    for (;;) {
+int main() 
+{
+    for (;;) 
+    {
         scanf("%d", &nCosts);
-        if (nCosts == 0) { 
+        if (nCosts == 0) 
+        { 
             break;
         }
         
         int c = 0;
-        for (c = 0; c < nCosts; c++) {
+        for (c = 0; c < nCosts; c++) 
+        {
             int dollars;
             int cents;
             scanf("%d.%d", &dollars, &cents);
@@ -68,11 +74,15 @@ int main() {
         double given = 0;
         
         int i;
-        for (i = 0; i < nCosts; i++) {
+        for (i = 0; i < nCosts; i++) 
+        {
             double deltaCents = costs[i] - avgCents;
-            if (deltaCents < 0) {
+            if (deltaCents < 0) 
+            {
                 taken += -((int) deltaCents) / 100.0;
-            } else {
+            } 
+            else 
+            {
                 given += ((int) deltaCents) / 100.0;
             }
         }
